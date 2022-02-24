@@ -1,4 +1,4 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
+import { Given, When, Then, Before } from '@wdio/cucumber-framework';
 
 import LoginPage from '../pageobjects/login.page';
 import SecurePage from '../pageobjects/secure.page';
@@ -8,6 +8,8 @@ const pages = {
     login: LoginPage,
     addElement: AddRemoveElementPage
 }
+
+Before('@skip',function() {return 'skipped'})
 
 Given(/^I am on the (\w+) page$/, async (page) => {
     await pages[page].open()

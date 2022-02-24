@@ -11,6 +11,7 @@ Feature: The Internet Guinea Pig Website
       | tomsmith | SuperSecretPassword! | You logged into a secure area! |
       | foobar   | barfoo               | Your username is invalid!      |
 
+  @skip
   Scenario: As a user, I can log into the secure area
 
     Given I am on the login page
